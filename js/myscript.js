@@ -171,5 +171,11 @@ createApp({
             ]            
         }
     },
-    
+    methods: {
+        // creo il metodo per far si che cliccando su una chat nella lista appare quella
+        selectChat (index) {
+            let k = index;
+            this.activeChat = k;
+        }
+    } 
 }).mount("#appContainer");
