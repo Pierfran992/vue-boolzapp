@@ -25,76 +25,80 @@
         <div class="bg__bar__top"></div>
 
         <!-- creo la parte biancastra di sottofondo -->
-        <div class="bg__page"></div>
+        <div class="bg__page">
+            <!-- creo il container dell'app -->
+            <div id="appContainer" class="app__container">
+                <!-- creo la top bar dell'app -->
+                <header class="app__top__bar">
 
-        <!-- creo il container dell'app -->
-        <div id="appContainer" class="app__container">
-            <!-- creo la top bar dell'app -->
-            <header class="app__top__bar">
-
-                <div class="atb__left">
-                    <!-- slot dell'avatar e del nome dell'utente -->
-                    <div class="slot__avatar__user">
-                        <img src="img/avatar_io.jpg" alt="Il mio avatar" class="avatar">
-                        <span>Sofia</span>
-                    </div>
-                    <div class="slot__setting__icon">
-                        <i class="fa-solid fa-circle-notch"></i>
-                        <i class="fa-solid fa-message"></i>
-                        <i class="fa-solid fa-ellipsis-vertical"></i>
-                    </div>
-                </div>
-
-                <div class="atb__right">
-                    <div class="slot__avatar__friend">
-                        <img src="img/avatar_1.jpg" alt="avatar friend" class="avatar">
-                        <span>Michele</span>
-                    </div>
-                    <div class="slot__setting__icon">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                        <i class="fa-solid fa-paperclip"></i>
-                        <i class="fa-solid fa-ellipsis-vertical"></i>
-                    </div>
-                </div>
-
-            </header>
-
-            <!-- creo il corpo centrale dell'app -->
-            <main class="app__body">
-                <!-- creo la barra laterale dove sono presenti la lista delle chat -->
-                <div class="body_bar_left">
-                    <!-- silenziare o ricevere le notifiche sul desktop -->
-                    <div class="silence__notific">
-                        <div class="icon_silence">
-                            <i class="fa-solid fa-bell-slash"></i>
+                    <div class="atb__left">
+                        <!-- slot dell'avatar e del nome dell'utente -->
+                        <div class="slot__avatar__user">
+                            <img src="img/avatar_io.jpg" alt="Il mio avatar" class="avatar">
+                            <span>Sofia</span>
                         </div>
-                        <div>
-                            <p>Ricevi notifiche di nuovi messaggi</p>
-                            <p><a href="#">Attiva notifiche desktop</a></p>
+                        <div class="slot__setting__icon">
+                            <i class="fa-solid fa-circle-notch"></i>
+                            <i class="fa-solid fa-message"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
                         </div>
                     </div>
 
-                    <!-- contiene la barra search per cercare una chat -->
-                    <div class="search__chat">
-
+                    <div class="atb__right">
+                        <div class="slot__avatar__friend">
+                            <img src="img/avatar_1.jpg" alt="avatar friend" class="avatar">
+                            <span>Michele</span>
+                        </div>
+                        <div class="slot__setting__icon">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <i class="fa-solid fa-paperclip"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
                     </div>
 
-                    <!-- lista delle chat aperte -->
-                    <div class="friends__chat">
+                </header>
 
+                <!-- creo il corpo centrale dell'app -->
+                <main class="app__body">
+                    <!-- creo la barra laterale dove sono presenti la lista delle chat -->
+                    <div class="body_bar_left">
+                        <!-- silenziare o ricevere le notifiche sul desktop -->
+                        <div class="silence__notific">
+                            <div class="icon_silence">
+                                <i class="fa-solid fa-bell-slash"></i>
+                            </div>
+                            <div>
+                                <p>Ricevi notifiche di nuovi messaggi</p>
+                                <p><a href="#">Attiva notifiche desktop</a></p>
+                            </div>
+                        </div>
+
+                        <!-- contiene la barra search per cercare una chat -->
+                        <div class="ctn__search__chat">
+                            <div>
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                            <input type="text" placeholder="Cerca o inizia una nuova chat" class="search__chat">
+                        </div>
+
+                        <!-- lista delle chat aperte -->
+                        <div class="friends__chat">
+
+                        </div>
                     </div>
-                </div>
 
-                <!-- creo il container della chat -->
-                <div class="ctn__chat">
-                    <!-- chat -->
-                    <div class="body__chat"></div>
+                    <!-- creo il container della chat -->
+                    <div class="ctn__chat">
+                        <!-- chat -->
+                        <div class="body__chat"></div>
 
-                    <!-- container dell'input per inviare un messaggio -->
-                    <div class="ctn_input_send"></div>
-                </div>
-            </main>
+                        <!-- container dell'input per inviare un messaggio -->
+                        <div class="ctn_input_send"></div>
+                    </div>
+                </main>
+            </div>
         </div>
+
     </section>
 
     <!-- vuejs -->
