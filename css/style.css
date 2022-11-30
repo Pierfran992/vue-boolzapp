@@ -78,7 +78,7 @@
 }
 
 .slot__setting__icon > i {
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 /* body app rules */
@@ -98,8 +98,26 @@
     background-color: #8edafc;
     width: 100%;
     height: 80px;
+    padding: 10px;
     border-left: solid 2px #8edafc;
+    display: flex;
+    align-items: center;
+}
 
+.icon_silence {
+    color: #8edafc;
+    background-color: #fff;
+    font-size: 35px;
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 50%;
+}
+
+.silence__notific a {
+    color: #6b7376;
 }
 
 .search__chat {
