@@ -95,7 +95,14 @@
                     <!-- creo il container della chat -->
                     <div class="ctn__chat">
                         <!-- chat -->
-                        <div class="body__chat"></div>
+                        <div class="body__chat">
+                            <div class="slot__message">
+                                <div v-for="(obj, x) in contacts[activeChat].messages" :class="obj.status === 'sent' ? 'send__message' : 'received__message'">
+                                    <p>{{obj.message}}</p>
+                                    <div class="data__message">{{obj.date}}</div>
+                                </div>
+                            </div>
+                        </div>
 
                         <!-- container dell'input per inviare un messaggio -->
                         <div class="ctn_input_send">
