@@ -179,6 +179,8 @@
     height: calc(100% - 70px);
 }
 
+
+
 .ctn_input_send {
     background-color: #eaeaea;
     color: #b1b1b1;
@@ -189,7 +191,7 @@
     font-size: 20px;
 }
 
-.send__message {
+.send {
     width: 85%;
     height: 40px;
     margin: 0 20px;
