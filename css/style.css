@@ -33,6 +33,13 @@
     translate: -50%;
 }
 
+.avatar {
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
 /* rules app__container */
 
 /* top bar app rules */
@@ -47,6 +54,31 @@
     width: 400px;
     height: 100%;
     border-right: solid 2px #b1b1b1;
+}
+
+.atb__right {
+    width: calc(100% - 400px);
+}
+
+.atb__left, .atb__right {
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.slot__avatar__user, .slot__avatar__friend {
+    display: flex;
+    align-items: center;
+}
+
+.slot__setting__icon {
+    color: #b1b1b1;
+    font-size: 30px;
+    line-height: 100px;
+}
+
+.slot__setting__icon > i {
+    margin-left: 10px;
 }
 
 /* body app rules */
