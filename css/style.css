@@ -157,6 +157,10 @@
     overflow-y: auto;
 }
 
+.active {
+    background-color: #e9ebeb;
+}
+
 .slot__chat__friend {
     padding: 10px 20px;
     border-bottom: solid 1px #b1b1b1;
@@ -177,9 +181,23 @@
     background-image: url("../img/mine.jpg");
     width: 100%;
     height: calc(100% - 70px);
+    overflow-y: auto;
 }
 
+.send__message, .received__message {
+    min-height: 40px;
+    min-width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+}
 
+.send__message {
+    background-color: #fff;
+}
+
+.received__message {
+    background-color: #d5f9ba;
+}
 
 .ctn_input_send {
     background-color: #eaeaea;
