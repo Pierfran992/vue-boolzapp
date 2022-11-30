@@ -46,8 +46,8 @@
 
                     <div class="atb__right">
                         <div class="slot__avatar__friend">
-                            <img src="img/avatar_1.jpg" alt="avatar friend" class="avatar">
-                            <span>Michele</span>
+                            <img :src="contacts[activeChat].avatar" :alt="contacts[activeChat].name" class="avatar">
+                            <span>{{contacts[activeChat].name}}</span>
                         </div>
                         <div class="slot__setting__icon">
                             <i class="fa-solid fa-magnifying-glass"></i>
@@ -83,7 +83,7 @@
 
                         <!-- lista delle chat aperte -->
                         <div class="friends__chat">
-                            <div class="slot__chat__friend" v-for="(elem, i) in contacts">
+                            <div class="slot__chat__friend" v-for="(elem, i) in contacts" @click="selectChat(i)">
                                 <div class="slot__avatar__friend">
                                     <img :src="elem.avatar" alt="{{elem.name}}" class="avatar">
                                     <span>{{elem.name}}</span>
@@ -98,7 +98,11 @@
                         <div class="body__chat"></div>
 
                         <!-- container dell'input per inviare un messaggio -->
-                        <div class="ctn_input_send"></div>
+                        <div class="ctn_input_send">
+                            <i class="fa-regular fa-face-smile"></i>
+                            <input type="text" placeholder="Scrivi un messaggio..." class="send__message">
+                            <i class="fa-solid fa-microphone"></i>
+                        </div>
                     </div>
                 </main>
             </div>
