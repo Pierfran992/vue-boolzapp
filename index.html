@@ -83,7 +83,12 @@
 
                         <!-- lista delle chat aperte -->
                         <div class="friends__chat">
-
+                            <div class="slot__chat__friend" v-for="(elem, i) in contacts">
+                                <div class="slot__avatar__friend">
+                                    <img :src="elem.avatar" alt="{{elem.name}}" class="avatar">
+                                    <span>{{elem.name}}</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 

@@ -70,6 +70,7 @@
 .slot__avatar__user, .slot__avatar__friend {
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 .slot__setting__icon {
@@ -152,6 +153,13 @@
 .friends__chat {
     width: 100%;
     height: calc(100% - 120px);
+    overflow-y: auto;
+}
+
+.slot__chat__friend {
+    padding: 10px 20px;
+    border-bottom: solid 1px #b1b1b1;
+    cursor: pointer;
 }
 
 .ctn__search__chat, .friends__chat {
