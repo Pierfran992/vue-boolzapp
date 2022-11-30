@@ -13,19 +13,16 @@
 .bg__bar__top {
     background-color: #009688;
     width: 100%;
-    height: 100px;
+    height: 200px;
 }
 
 .bg__page {
     background-color: #dadbd3;
     width: 100%;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 200px);
 }
 
 .app__container {
-    /* DEBUG */
-    background-color: blue;
-    border: solid 2px #fff;
     /* no debug */
     width: 80%;
     min-width: 1000px;
@@ -37,3 +34,69 @@
 }
 
 /* rules app__container */
+
+/* top bar app rules */
+.app__top__bar {
+    background-color: #eaeaea;
+    width: 100%;
+    height: 100px;
+    display: flex;
+}
+
+.atb__left {
+    width: 400px;
+    height: 100%;
+    border-right: solid 2px #b1b1b1;
+}
+
+/* body app rules */
+.app__body {
+    width: 100%;
+    height: calc(100% - 100px);
+    display: flex;
+}
+
+.body_bar_left {
+    background-color: #fff;
+    width: 400px;
+    height: 100%;
+}
+
+.silence__notific {
+    background-color: #8edafc;
+    width: 100%;
+    height: 80px;
+    border-left: solid 2px #8edafc;
+
+}
+
+.search__chat {
+    width: 100%;
+    height: 60px;
+}
+
+.friends__chat {
+    width: 100%;
+    height: calc(100% - 140px);
+}
+
+.search__chat, .friends__chat {
+    border-right: solid 2px #b1b1b1;
+}
+
+.ctn__chat {
+    width: calc(100% - 400px);
+    height: 100%;
+}
+
+.body__chat {
+    background-image: url("../img/mine.jpg");
+    width: 100%;
+    height: calc(100% - 70px);
+}
+
+.ctn_input_send {
+    background-color: #eaeaea;
+    width: 100%;
+    height: 70px;
+}

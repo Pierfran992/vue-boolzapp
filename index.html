@@ -29,9 +29,8 @@
 
         <!-- creo il container dell'app -->
         <div id="appContainer" class="app__container">
-
             <!-- creo la top bar dell'app -->
-            <section class="app__top__bar">
+            <header class="app__top__bar">
 
                 <div class="atb__left">
 
@@ -41,8 +40,37 @@
 
                 </div>
 
-            </section>
+            </header>
 
+            <!-- creo il corpo centrale dell'app -->
+            <main class="app__body">
+                <!-- creo la barra laterale dove sono presenti la lista delle chat -->
+                <div class="body_bar_left">
+                    <!-- silenziare o ricevere le notifiche sul desktop -->
+                    <div class="silence__notific">
+
+                    </div>
+
+                    <!-- contiene la barra search per cercare una chat -->
+                    <div class="search__chat">
+
+                    </div>
+
+                    <!-- lista delle chat aperte -->
+                    <div class="friends__chat">
+
+                    </div>
+                </div>
+
+                <!-- creo il container della chat -->
+                <div class="ctn__chat">
+                    <!-- chat -->
+                    <div class="body__chat"></div>
+
+                    <!-- container dell'input per inviare un messaggio -->
+                    <div class="ctn_input_send"></div>
+                </div>
+            </main>
         </div>
     </section>
 
