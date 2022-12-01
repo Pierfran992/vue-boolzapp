@@ -4,7 +4,7 @@ createApp({
     data () {
         return {
 
-            search: '',
+            search: null,
 
             activeChat: 0,
 
@@ -223,7 +223,7 @@ createApp({
                     return this.search.toLowerCase().split('').every(v => item.name.toLowerCase().includes(v))
                 });
             } else {
-                this.contacts;
+                return this.contacts;
             }
         }
     }

@@ -83,13 +83,7 @@
 
                         <!-- lista delle chat aperte -->
                         <div class="friends__chat">
-                            <div class="slot__chat__friend" v-if="contacts.length" v-for="(elem, i) in contacts" :class="activeChat === i ? 'active' : ''" @click="selectChat(i)">
-                                <div class="slot__avatar__friend">
-                                    <img :src="elem.avatar" alt="{{elem.name}}" class="avatar">
-                                    <span>{{elem.name}}</span>
-                                </div>
-                            </div>
-                            <div class="slot__chat__friend" v-for="(item) in filterChat" :class="activeChat === i ? 'active' : ''" @click="selectChat(i)">
+                            <div class="slot__chat__friend" v-for="(item, i) in filterChat" :class="activeChat === i ? 'active' : ''" @click="selectChat(i)">
                                 <div class="slot__avatar__friend">
                                     <img :src="item.avatar" alt="{{item.name}}" class="avatar">
                                     <span>{{item.name}}</span>
