@@ -1,10 +1,10 @@
 const {createApp} = Vue;
 
-const {ref} = Vue;
-
 createApp({
     data () {
         return {
+
+            search: '',
 
             activeChat: 0,
 
@@ -25,9 +25,6 @@ createApp({
                     status: 'received'
                     
                 },
-            
-
-            input : ref(""),
 
             contacts: [
                 {
@@ -217,9 +214,17 @@ createApp({
 
             // svuoto l'input una volta che il messaggio è stato inviato
             this.newSendMessage.message = '';
-        },
-        filterChat() {
-            this.contacts.filter((contact) => contact.name.toLowerCase().includes(input.value.toLowerCase()));
         }
-    } 
+    },
+    computed: {
+        filterChat() {
+            if(this.search) {
+                return this.contacts.filter((item) => {
+                    return this.search.toLowerCase().split('').every(v => item.name.toLowerCase().includes(v))
+                });
+            } else {
+                this.contacts;
+            }
+        }
+    }
 }).mount("#appContainer");
