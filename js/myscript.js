@@ -1,5 +1,7 @@
 const {createApp} = Vue;
 
+const {ref} = Vue;
+
 createApp({
     data () {
         return {
@@ -23,6 +25,9 @@ createApp({
                     status: 'received'
                     
                 },
+            
+
+            input : ref(""),
 
             contacts: [
                 {
@@ -212,6 +217,9 @@ createApp({
 
             // svuoto l'input una volta che il messaggio è stato inviato
             this.newSendMessage.message = '';
+        },
+        filterChat() {
+            this.contacts.filter((contact) => contact.name.toLowerCase().includes(input.value.toLowerCase()));
         }
     } 
-}).mount("#appContainer");               
+}).mount("#appContainer");
