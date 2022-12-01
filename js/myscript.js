@@ -14,6 +14,15 @@ createApp({
                     status: 'sent'
                     
                 },
+            
+            newReceivedMessage :
+                {
+                    
+                    date: 'ora',
+                    message: 'Scoprii di avere certi favolosi poteri segreti il giorno che sollevai la mia spada magica e dissi: "Per la forza di Grayskull. La grande forza è con me!".',
+                    status: 'received'
+                    
+                },
 
             contacts: [
                 {
@@ -194,6 +203,13 @@ createApp({
                 let newObject = {...this.newSendMessage};
                 console.log(newObject);
                 this.contacts[z].messages.push(newObject);
+
+                // richiamo la funzione per la risposta
+                setTimeout(receivedMessage(z), 1000);
+                // creo la time function per far generare la risposta automatica
+                function receivedMessage(n) {
+                    this.contacts[n].messages.push(this.newReceivedMessage);
+                }
             }
 
             // svuoto l'input una volta che il messaggio è stato inviato
