@@ -203,17 +203,15 @@ createApp({
                 let newObject = {...this.newSendMessage};
                 console.log(newObject);
                 this.contacts[z].messages.push(newObject);
-
-                // richiamo la funzione per la risposta
-                setTimeout(receivedMessage(z), 1000);
+                
                 // creo la time function per far generare la risposta automatica
-                function receivedMessage(n) {
-                    this.contacts[n].messages.push(this.newReceivedMessage);
-                }
+                setTimeout( ()=> {
+                    this.contacts[z].messages.push(this.newReceivedMessage);
+                },1000);
             }
 
             // svuoto l'input una volta che il messaggio è stato inviato
             this.newSendMessage.message = '';
         }
     } 
-}).mount("#appContainer");
+}).mount("#appContainer");               
