@@ -6,6 +6,15 @@ createApp({
 
             activeChat: 0,
 
+            newSendMessage :
+                {
+                    
+                    date: 'ora',
+                    message: '',
+                    status: 'sent'
+                    
+                },
+
             contacts: [
                 {
                     name: 'Michele',
@@ -176,6 +185,19 @@ createApp({
         selectChat (index) {
             let k = index;
             this.activeChat = k;
+        },
+
+        // creo il metodo per far inviare un messaggio
+        addSendMessage(z) {
+            // creo la condizione per far inviare un messaggio all'user
+            if (this.newSendMessage.message !== '') {
+                let newObject = {...this.newSendMessage};
+                console.log(newObject);
+                this.contacts[z].messages.push(newObject);
+            }
+
+            // svuoto l'input una volta che il messaggio è stato inviato
+            this.newSendMessage.message = '';
         }
     } 
 }).mount("#appContainer");
