@@ -201,7 +201,7 @@ createApp({
         // creo il metodo per far inviare un messaggio
         addSendMessage(z) {
             // creo la condizione per far inviare un messaggio all'user
-            if (this.newSendMessage.message !== '') {
+            if (this.newSendMessage.message !== '' && !(this.newSendMessage.message.trim().length === 0)) {
                 let newObject = { ...this.newSendMessage };
                 console.log(newObject);
                 this.contacts[z].messages.push(newObject);
@@ -219,6 +219,7 @@ createApp({
     computed: {
         filterChat() {
             if (this.search) {
+                this.activeChat = 0;
                 return this.contacts.filter((item) => {
                     // return this.search.toLowerCase().split('').every(v => item.name.toLowerCase().includes(v))
                     return this.search.toLowerCase().split(' ').every(elem => item.name.toLowerCase().indexOf(elem, 0) != -1);
