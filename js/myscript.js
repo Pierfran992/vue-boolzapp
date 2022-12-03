@@ -1,30 +1,30 @@
-const {createApp} = Vue;
+const { createApp } = Vue;
 
 createApp({
-    data () {
+    data() {
         return {
 
             search: null,
 
             activeChat: 0,
 
-            newSendMessage :
-                {
-                    
-                    date: 'ora',
-                    message: '',
-                    status: 'sent'
-                    
-                },
-            
-            newReceivedMessage :
-                {
-                    
-                    date: 'ora',
-                    message: 'Scoprii di avere certi favolosi poteri segreti il giorno che sollevai la mia spada magica e dissi: "Per la forza di Grayskull. La grande forza è con me!".',
-                    status: 'received'
-                    
-                },
+            newSendMessage:
+            {
+
+                date: moment().format('DD/MM/YYYY hh:mm:ss'),
+                message: '',
+                status: 'sent'
+
+            },
+
+            newReceivedMessage:
+            {
+
+                date: moment().format('DD/MM/YYYY hh:mm:ss'),
+                message: 'Scoprii di avere certi favolosi poteri segreti il giorno che sollevai la mia spada magica e dissi: "Per la forza di Grayskull. La grande forza è con me!".',
+                status: 'received'
+
+            },
 
             contacts: [
                 {
@@ -188,12 +188,12 @@ createApp({
                         }
                     ],
                 }
-            ]            
+            ]
         }
     },
     methods: {
         // creo il metodo per far si che cliccando su una chat nella lista appare quella
-        selectChat (index) {
+        selectChat(index) {
             let k = index;
             this.activeChat = k;
         },
@@ -205,11 +205,11 @@ createApp({
                 let newObject = {...this.newSendMessage};
                 console.log(newObject);
                 this.contacts[z].messages.push(newObject);
-                
+
                 // creo la time function per far generare la risposta automatica
-                setTimeout( ()=> {
+                setTimeout(() => {
                     this.contacts[z].messages.push(this.newReceivedMessage);
-                },1000);
+                }, 1000);
             }
 
             // svuoto l'input una volta che il messaggio è stato inviato
@@ -218,7 +218,7 @@ createApp({
     },
     computed: {
         filterChat() {
-            if(this.search) {
+            if (this.search) {
                 return this.contacts.filter((item) => {
                     // return this.search.toLowerCase().split('').every(v => item.name.toLowerCase().includes(v))
                     return this.search.toLowerCase().split(' ').every(elem => item.name.toLowerCase().indexOf(elem) != -1);
