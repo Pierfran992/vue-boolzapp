@@ -46,8 +46,8 @@
 
                     <div class="atb__right">
                         <div class="slot__avatar__friend">
-                            <img :src="contacts[activeChat].avatar" :alt="contacts[activeChat].name" class="avatar">
-                            <span>{{contacts[activeChat].name}}</span>
+                            <img :src="filterChat[activeChat].avatar" :alt="filterChat[activeChat].name" class="avatar">
+                            <span>{{filterChat[activeChat].name}}</span>
                         </div>
                         <div class="slot__setting__icon">
                             <i class="fa-solid fa-magnifying-glass"></i>
@@ -97,7 +97,7 @@
                         <!-- chat -->
                         <div class="body__chat">
                             <div class="slot__message">
-                                <div v-for="(obj, x) in contacts[activeChat].messages" :class="obj.status === 'sent' ? 'send__message' : 'received__message'">
+                                <div v-for="(obj, x) in filterChat[activeChat].messages" :class="obj.status === 'sent' ? 'send__message' : 'received__message'">
                                     <p>{{obj.message}}</p>
                                     <div class="data__message">{{obj.date}}</div>
                                 </div>

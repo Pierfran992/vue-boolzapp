@@ -220,7 +220,8 @@ createApp({
         filterChat() {
             if(this.search) {
                 return this.contacts.filter((item) => {
-                    return this.search.toLowerCase().split('').every(v => item.name.toLowerCase().includes(v))
+                    // return this.search.toLowerCase().split('').every(v => item.name.toLowerCase().includes(v))
+                    return this.search.toLowerCase().split(' ').every(elem => item.name.toLowerCase().indexOf(elem) != -1);
                 });
             } else {
                 return this.contacts;
