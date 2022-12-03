@@ -56,14 +56,16 @@
     width: calc(100% - 400px);
 }
 
-.atb__left, .atb__right {
+.atb__left,
+.atb__right {
     padding: 0 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.slot__avatar__user, .slot__avatar__friend {
+.slot__avatar__user,
+.slot__avatar__friend {
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -74,7 +76,7 @@
     font-size: 20px;
 }
 
-.slot__setting__icon > i {
+.slot__setting__icon>i {
     margin-left: 20px;
 }
 
@@ -126,7 +128,7 @@
     align-items: center;
 }
 
-.ctn__search__chat > div {
+.ctn__search__chat>div {
     color: #b1b1b1;
     font-size: 20px;
     width: 60px;
@@ -163,7 +165,8 @@
     cursor: pointer;
 }
 
-.ctn__search__chat, .friends__chat {
+.ctn__search__chat,
+.friends__chat {
     border-right: solid 2px #b1b1b1;
 }
 
@@ -185,7 +188,8 @@
     margin: 50px auto;
 }
 
-.send__message, .received__message {
+.send__message,
+.received__message {
     min-height: 40px;
     width: 300px;
     margin-bottom: 10px;

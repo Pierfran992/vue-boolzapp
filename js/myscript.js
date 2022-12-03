@@ -202,7 +202,7 @@ createApp({
         addSendMessage(z) {
             // creo la condizione per far inviare un messaggio all'user
             if (this.newSendMessage.message !== '') {
-                let newObject = {...this.newSendMessage};
+                let newObject = { ...this.newSendMessage };
                 console.log(newObject);
                 this.contacts[z].messages.push(newObject);
 
@@ -221,7 +221,7 @@ createApp({
             if (this.search) {
                 return this.contacts.filter((item) => {
                     // return this.search.toLowerCase().split('').every(v => item.name.toLowerCase().includes(v))
-                    return this.search.toLowerCase().split(' ').every(elem => item.name.toLowerCase().indexOf(elem) != -1);
+                    return this.search.toLowerCase().split(' ').every(elem => item.name.toLowerCase().indexOf(elem, 0) != -1);
                 });
             } else {
                 return this.contacts;
