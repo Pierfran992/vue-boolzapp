@@ -204,11 +204,11 @@ createApp({
             if (this.newSendMessage.message !== '' && !(this.newSendMessage.message.trim().length === 0)) {
                 let newObject = { ...this.newSendMessage };
                 console.log(newObject);
-                this.contacts[z].messages.push(newObject);
+                this.filterChat[z].messages.push(newObject);
 
                 // creo la time function per far generare la risposta automatica
                 setTimeout(() => {
-                    this.contacts[z].messages.push(this.newReceivedMessage);
+                    this.filterChat[z].messages.push(this.newReceivedMessage);
                 }, 1000);
             }
 
@@ -222,7 +222,7 @@ createApp({
                 this.activeChat = 0;
                 return this.contacts.filter((item) => {
                     // return this.search.toLowerCase().split('').every(v => item.name.toLowerCase().includes(v))
-                    return this.search.toLowerCase().split(' ').every(elem => item.name.toLowerCase().indexOf(elem, 0) != -1);
+                    return this.search.toLowerCase().split(' ').every(elem => item.name.toLowerCase().indexOf(elem, 0) !== -1);
                 });
             } else {
                 return this.contacts;
