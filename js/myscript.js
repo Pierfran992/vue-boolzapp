@@ -8,23 +8,7 @@ createApp({
 
             activeChat: 0,
 
-            newSendMessage:
-            {
-
-                date: moment().format('DD/MM/YYYY hh:mm:ss'),
-                message: '',
-                status: 'sent'
-
-            },
-
-            newReceivedMessage:
-            {
-
-                date: moment().format('DD/MM/YYYY hh:mm:ss'),
-                message: 'Scoprii di avere certi favolosi poteri segreti il giorno che sollevai la mia spada magica e dissi: "Per la forza di Grayskull. La grande forza è con me!".',
-                status: 'received'
-
-            },
+            newSendMessage: '',
 
             contacts: [
                 {
@@ -201,19 +185,29 @@ createApp({
         // creo il metodo per far inviare un messaggio
         addSendMessage(z) {
             // creo la condizione per far inviare un messaggio all'user
-            if (this.newSendMessage.message !== '' && !(this.newSendMessage.message.trim().length === 0)) {
-                let newObject = { ...this.newSendMessage };
+            if (this.newSendMessage !== '' && !(this.newSendMessage.trim().length === 0)) {
+                let newObject = {
+                    date: moment().format('DD/MM/YYYY hh:mm:ss'),
+                    message: this.newSendMessage,
+                    status: 'sent'
+                };
                 console.log(newObject);
                 this.filterChat[z].messages.push(newObject);
 
                 // creo la time function per far generare la risposta automatica
                 setTimeout(() => {
-                    this.filterChat[z].messages.push(this.newReceivedMessage);
+                    let newReceivedMessage =
+                    {
+                        date: moment().format('DD/MM/YYYY hh:mm:ss'),
+                        message: 'Scoprii di avere certi favolosi poteri segreti il giorno che sollevai la mia spada magica e dissi: "Per la forza di Grayskull. La grande forza è con me!".',
+                        status: 'received'
+                    };
+                    this.filterChat[z].messages.push(newReceivedMessage);
                 }, 1000);
             }
 
             // svuoto l'input una volta che il messaggio è stato inviato
-            this.newSendMessage.message = '';
+            this.newSendMessage = '';
         }
     },
     computed: {
