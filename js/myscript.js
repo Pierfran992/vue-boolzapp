@@ -205,7 +205,6 @@ createApp({
                     this.filterChat[z].messages.push(newReceivedMessage);
                 }, 1000);
             }
-
             // svuoto l'input una volta che il messaggio è stato inviato
             this.newSendMessage = '';
         }
